@@ -1,0 +1,127 @@
+html,
+body {
+    height: 100%;
+    font-family: $font-primary;
+}
+body {
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F3F5F9 100%);  
+}
+
+.site {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    background-image: url('../img/laptop.png');
+    background-size: 50%;
+    background-position-x:70%;
+    background-repeat: no-repeat; 
+    @include xl-up{
+        padding-left: 175px;
+        background-size:contain;
+       }
+}
+
+.content{
+    padding: 30px 40px;
+    @include xl-up{
+        width:510px;
+    }
+    &__logo{
+        width: 102px;
+        height: 35px;
+        margin-bottom: 170px;
+    }
+    &__text{
+        margin-bottom: 130px;
+    }
+}
+.banner{
+    background-color:rgba(255,255,255,0.9);
+     width:100%;
+     position:relative;
+     @include xl-up{
+        margin-left:100px;
+     }
+     &__button{
+        position:absolute;
+        top:-50px;
+        @include md-up{
+            top:-30px;
+        }
+        @include translateX;
+         @include xl-up{
+            left:-100px;
+            @include translateY; 
+         }
+     }
+    &__content{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__element{
+        margin:35px 20px;
+        @include md-up{
+            margin: 35px 40px;
+        }
+    }
+    &__label{
+        font-size:14px;
+        color:$color-primary;
+        text-transform:uppercase;
+        padding-bottom:10px;
+        text-align:center;
+    }
+    &__text{
+        font-size:30px;
+        text-align:center;
+    }
+}
+
+.button{
+    box-shadow: 0px 23px 23px -13px rgba(48, 95, 150, 0.23);
+    border-radius: 4px;
+    background-color:$color-secondary;
+    padding:18px 47px;
+    font-family: $font-primary;
+    font-size:14px;
+    font-weight:700;
+    text-transform: uppercase;
+    color:white;
+    text-align: center;
+}
+
+.counter{
+    display:flex;
+    flex-direction: row;
+    &__label{
+        font-size:11px;
+        color:$color-primary;
+        text-transform:uppercase;
+        padding-top:8px;
+        text-align:center;
+    }
+    &__element{
+        text-align: center;
+        padding: 0 3px;
+    }
+}
+
+footer{
+    padding: 20px;
+    @include xl-up{
+        padding:75px 174px 37px;
+    }
+    p{
+        text-align:center;
+        font-size:14px;
+        font-weight:400;
+    }
+}

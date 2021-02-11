@@ -1,0 +1,44 @@
+
+@mixin md-down {
+    @media screen and (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin md-up {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg-down {
+    @media screen and (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin lg-up {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl-up {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+
+
+@mixin translateX {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin translateY {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
